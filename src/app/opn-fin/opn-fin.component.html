@@ -1,0 +1,134 @@
+<header id="container">
+    <nav [class.flexbox_container]="header_variable">
+        <div class="flexbox-item-logo">
+            <img src="assets/img/logo.png" alt="logo" class="open-logo">
+        </div>
+        <ul class="nav-items flexbox-items-menu">
+            <li class="pro"><a href="#">Products</a></li>
+            <li class="sol"><a href="#">Solutions</a></li>
+            <li class="pri"><a href="#">Pricing</a></li>
+        </ul>
+        <div class="flexbox-items-buttons">
+            <button type="button" class="outlined">Login</button>
+            <button type="button" class="filled">Get Started</button>
+        </div>
+    </nav>
+</header>
+<section class="main-col">
+    <div class="blob-img">
+        <img src="assets/img/circle.svg" alt="blob1">
+    </div>
+    <div class="blob-small">
+        <img src="assets/img/blob-small.svg" alt="blob2">
+    </div>
+    <div class="flex-container">
+        <div class="small-container">
+            <img src="assets/img/We make it Super Sim.svg">
+            <div class="divider black"></div>
+        </div>
+        <div class="image-container">
+            <img src="assets/img/collect_img-video.png" class="video">
+            <img src="assets/img/accounting_dots.svg" class="dots">
+        </div>
+    </div>
+    <div id="cal">
+        <div class="cal-flex-container1">
+            <div class="flex-item-cal box">
+                <h3 class="h">Eligibility Calculator</h3>
+                <div class="form-feild">
+                    <label class="income">Monthly Income</label>
+                    <div class="range-slider">
+                        <h1>₹{{income}}</h1>
+                        <input type="range" [(ngModel)]="income" (change)="changeIncome($event)" min="100000"
+                            max="300000" class="slider0">
+                        <div class="amnt">
+                            <p>₹ 100000</p>
+                            <p>₹ 300000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-feild2">
+                    <label class="expense">Monthly Expense</label>
+                    <div class="range-slider2">
+                        <h1>₹{{expense}}</h1>
+                        <input type="range" [(ngModel)]="expense" (change)="changeExpense($event)" min="10000"
+                            max="100000" class="slider2">
+                    </div>
+                </div>
+                <div class="form-feild3">
+                    <label class="tenure">Repayment Tenure</label>
+                    <div class="input-container">
+                        <select [(ngModel)]="monthSelected">
+                            <option *ngFor="let month of months" [value]="month.id">{{month.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-feild4">
+                    <label class="loans">Do you have any existing loans?</label>
+                    <span>
+                        <label class="switch">
+                            <mat-slide-toggle checked="true" color="primary">Slide me!</mat-slide-toggle>
+                        </label>
+                    </span>
+                </div>
+                <div class="form-feild5">
+                    <label class="emi">EMI of existing loan (optional)</label>
+                    <div class="input-text">
+                        <input type="text" placeholder="₹ 15000" class="plcehold">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-result box">
+                <h3 class="lamnt">Loan Amount</h3>
+                <p class="rs">₹ 100000</p>
+                <h3 class="ur">Your EMI will be</h3>
+                <p class="rs15">₹ 15000</p>
+                <div>
+                    <button type="button" class="outlined2">Get Money</button>
+                </div>
+            </div>
+            <img src="assets/img/accounting_dots.svg" class="dots1">
+        </div>
+    </div>
+</section>
+<div class="cards-flex-container">
+    <img src="assets/img/sol_wave_bg.svg" class="wave">
+    <div>
+        <div class="card-container card-details">
+            <img src="assets/img/Get Paid Instantly.png" class="cardimage">
+            <h2 class="qcd">Quick cash disbursement</h2>
+            <p class="card-desc">Get terms loans that your business needs within 72 hrs</p>
+        </div>
+        <div class="card-container2 card-details2">
+            <img src="assets/img/Low interest rate.png" class="cardimage2">
+            <h2 class="lir">Low-interest rate</h2>
+            <p class="card-desc2">Achieve your financial goals with an amazing interest rate starting at 13% per annum
+            </p>
+        </div>
+        <div class="card-container3 card-details3">
+            <img src="assets/img/Secure Payments.png" class="cardimage3">
+            <h2 class="zpw">Zero Paperwork</h2>
+            <p class="card-desc3">Get started instantly by submitting only your basic details & bank statements</p>
+        </div>
+    </div>
+    <div>
+        <div class="card-container4 card-details4">
+            <img src="assets/img/freelancer_feature_icon_6@1.5x.png" class="cardimage4">
+            <h2 class="aybf">Ace your business finances</h2>
+            <p class="card-desc4">Manage banking, accounting & everything in between, on one platform</p>
+        </div>
+        <div class="card-container5 card-details5">
+            <img src="assets/img/freelancer_feature_icon_6@1.5x.png" class="cardimage5">
+            <h2 class="ltfc">Loans to fight COVID-19</h2>
+            <p class="card-desc5">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>
+        </div>
+    </div>
+    <div>
+        <div class="small-container2">
+            <img src="assets/img/Boost your business.svg" class="boost">
+            <div class="divider2 black2"></div>
+            <p class="desc">Get your hands on a term loan that’s crafted for your business</p>
+        </div>
+        <button type="button" class="outlined3">Get an Opening Account</button>
+    </div>
+</div>
